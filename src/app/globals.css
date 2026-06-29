@@ -1,1 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+:root { color-scheme: dark; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  @apply bg-zinc-950 text-zinc-100 antialiased;
+  background:
+    radial-gradient(circle at top left, rgba(236,72,153,.12), transparent 28%),
+    radial-gradient(circle at top right, rgba(99,102,241,.10), transparent 26%),
+    linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0));
+}
+
+* { box-sizing: border-box; }
+
+::selection { background: rgba(168, 85, 247, .35); }
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+}
